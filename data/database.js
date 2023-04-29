@@ -5,7 +5,7 @@ const DBconnect = () => {
     .connect(process.env.MONGO_URL, {
       dbName: "TODOLIST",
     })
-    .then(() => console.log("Mongo is connected"))
+    .then((c) => console.log(`Data is connected ${c.connection.host}`))
     .catch((e) => console.log(e));
 };
 
